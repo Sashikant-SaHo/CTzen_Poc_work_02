@@ -1,0 +1,20 @@
+<div class="container">
+  <app-well (myEvent)="dataEvent($event)"></app-well>
+  <h2>Well List</h2>
+  <table class="table table-bordered">
+    <thead>
+      <tr>
+        <th>Name</th>
+        <th>Type</th>
+        <th>SuperKey</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let items of datalist">
+        <td [ngStyle]="{ color: 'red' }">{{ items["name"] }}</td>
+        <td [ngStyle]="{ 'background-color': 'green' }">{{ items["type"] }}</td>
+        <td>{{ items["key"] }}</td>
+      </tr>
+    </tbody>
+  </table>
+</div>
